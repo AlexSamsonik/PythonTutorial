@@ -1,2 +1,3 @@
 # Python Tutorial
-Practice the main point for python language.
+ - Core Python Training.
+ - Special python trick training ;)
