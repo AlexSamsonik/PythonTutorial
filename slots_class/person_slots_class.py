@@ -1,5 +1,5 @@
 """
-There are docstring...
+This is provides example of usage __slots__ for increase performance with get, set and delete property on the object.
 """
 from __future__ import annotations
 
@@ -8,9 +8,7 @@ from functools import partial
 
 
 class Person:
-    """
-    There are docstring
-    """
+    """There is simple Person class."""
 
     def __init__(self, name: str, surname: str, address: str, email: str):
         self.name = name
@@ -20,9 +18,7 @@ class Person:
 
 
 class PersonSlots:
-    """
-    There are docstring
-    """
+    """There is simple Person class but use __slots__."""
     __slots__ = "name", "surname", "address", "email"
 
     def __init__(self, name: str, surname: str, address: str, email: str):
@@ -34,9 +30,8 @@ class PersonSlots:
 
 def get_set_delete(person: Person | PersonSlots):
     """
-
-    :param person:
-    :return:
+    Function with set, get and delete address on Person or PersonSlots classes.
+    :param person: Person | PersonSlots object.
     """
 
     person.address = "Main St"
@@ -45,10 +40,7 @@ def get_set_delete(person: Person | PersonSlots):
 
 
 def main():
-    """
-
-    :return:
-    """
+    """Script which check difference between used and unused __slots__."""
     person = Person("Dane", "Stone", "Boston", "dane.stone@gmail.com")
     person_slots = PersonSlots("Dane", "Stone", "Boston", "dane.stone@gmail.com")
     number = 1_000_000
