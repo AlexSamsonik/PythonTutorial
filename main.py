@@ -1,3 +1,4 @@
+"""There is a main modul to check python's features."""
 from argparse import ArgumentParser
 
 if __name__ == '__main__':
